@@ -1,0 +1,383 @@
+body{
+  background: #0a1342;
+  color:white;
+}
+.navbar{
+  display:flex;
+  justify-content:center;
+  background:#0a1342;
+  padding:20px 20px;
+  box-shadow:0px 5px 10px #6482E3;
+  font-size: 80px;
+  border-radius: 20px;
+  height: 250px;
+  width:auto;
+  overflow: hidden;
+}
+.nav-logo{
+  position: absolute;
+}
+@keyframes animationforbtn{
+  10%{
+    background: #091f5e;
+  }
+  50%{
+    background: #065725;
+  }
+  75%{
+    background-color:#39024C ;
+  }
+  100%{
+    background-color: #091f5e;
+  }
+}
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit;        /* Uses the parent element's text color */
+  cursor: pointer;       /* Keeps the clickable hand cursor (fallback) */
+  font-size: 30px;        
+}
+.nav-links{
+  position: absolute;
+  top: 200px;
+}
+#usd-btn, #inr-btn{
+  position: relative;
+  background-color: #0a1342;
+  color:aliceblue;
+  border-radius: 50px;
+  animation: animationforbtn 5s linear infinite;
+  border-style: none;
+  border-color: aliceblue;
+  box-shadow: 1px 4px 10px #BA7DC7;
+  
+  transition-duration: 1s;
+  font-size: 20px;
+  
+  
+  
+}
+
+
+#usd-btn:hover, #inr-btn:hover{
+    bottom: 2px;
+    box-shadow:1px 4px 10px #ffffff;
+    transition-duration:1s ;
+}
+.currency-toggle{
+  padding:10px;
+  border:1px solid;
+  background-color: transparent;
+  color: white;
+  position :absolute;
+  left:50px;
+  border-style: none;
+  left:90%;
+  top:100px;
+}
+
+#detail-box{
+  margin-top: 15px;
+  padding:10px;
+  border:1px solid;
+  color:white;
+  font-family:sans-serif;
+}
+ .detail-grid{
+   display:flex;
+   gap:15px;
+ }
+.buy-submit{
+  border: black,solid;
+  padding: 15px;
+  font-size: 10px;
+  background-color: rgb(1, 19, 27);
+  color: #ffb6ea;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: .5s;
+
+}
+.buy-submit:hover{
+  background-color: #200519;
+  color: rgb(248, 248, 248);
+  box-shadow: 2px 3px 2px #f17cbd;
+  transition-duration: 0.5s;
+  transform: scale(1.05);
+
+}
+.controls{
+  display:flex;
+  gap:10px;
+  text-align:center;
+  margin:15px;
+  
+  flex-wrap:wrap;
+  
+}
+.search-input,.sort-select{
+  background-color:rgb(30, 43, 57);
+  border: 1 px solid rgb(155, 50, 50);
+  color:#ffffff;
+  padding:8px 10px;
+  border-radius: 50px;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+.search-input{
+  min-width:300px;
+}
+.search-input::placeholder {
+  color: #aab6ff;
+}
+.search-input:focus,.sort-input:focus{
+  border-style: 5px;
+  border-color:rgb(205, 211, 224);
+
+}
+.sort-select{
+  cursor:pointer;
+}
+
+.refresh-btn{
+  background-color:rgb(30, 43, 57);
+  color:white;
+  font-size:15px;
+  padding:8px 14px;
+  border-radius: 5px;
+  cursor:pointer;
+  transition:0.2s ease;
+  
+}
+
+.refresh-btn:hover{
+  background-color: rgb(0, 0, 0);
+}
+.refresh-btn:active{
+  transform:scale(0.97)
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input,
+  .sort-select,
+  .refresh-btn {
+    width: 100%;
+  }
+}
+
+#detail-box{
+  margin-top: 15px;
+  padding:10px;
+  border:1px solid;
+  color:white;
+  font-family:sans-serif;
+}
+
+
+
+.hero{
+  background: linear-gradient(180deg, #0b1a3a, #08122b);
+  padding-left:30px;
+  border:2px rgb(83, 3, 175),solid;
+  border-radius:50px;
+  margin: 10px;
+  padding-bottom: 10px ;
+  font-size:30px;
+  color:rgb(163, 213, 234);
+  border-top: #03023b;
+}
+.hero h1{
+  font-size:55px;
+  margin-bottom:5px;
+}
+.hero h1 {
+  color:#6c8cff;
+}
+.hero p {
+  color: #aab6ff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero-stats{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  flex-direction: column;
+}
+.stat-card{
+  flex:1;
+  min-width:180px;
+  background-color: #101b3c;
+  border: 1px solid #4a5c9a;
+  border-radius: 6px;
+   padding: 15px;
+  transition: 0.2s ease;
+}
+
+.stat-card:hover{
+  transform :translateY(-3px);
+  box-shadow: 5px 5px 5px #6B81C9;
+  border-width:5px;
+  
+}
+.stat-label{
+  font-size:35px;
+  font-weight: bold;
+  color:#bcc4f7;
+  margin-bottom: 15px;
+}
+.stat-value{
+  font-size: 25px;
+  font-family: arial;
+  font-weight: bold;
+  margin: 10px;
+}
+.stat-sub{
+  margin:10px;
+  color:#b7bcdf;
+}
+
+
+.table-wrap{
+  display: flex;
+  border: black,solid;
+  background-color:#070d2b;
+  margin: 10px;
+  padding: 15px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  
+}
+.table-head{
+  background-color: rgb(37, 1, 32);
+  display: flex;
+  border: rgb(102, 61, 68),solid;
+  margin: 10px;
+  padding: 15px;
+  flex-direction: row;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  align-items: left;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+#coin-list{
+  display: flex;
+  flex-direction: column;
+  border: rgb(6, 35, 97),solid;
+  margin: 10px;
+  padding: 20px;
+  gap: 6px;
+  font-size: x-large;
+  border-radius: 20px;
+}
+
+.coin-row{
+  display: flex;
+  border: rgb(27, 3, 27),solid;
+  margin: 25px;
+  padding: 25px;
+  justify-content: space-between;
+  font-size: 30px;
+  background-color: #240230;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 2px 2px 10px #C94BBD;
+  animation: shadowe 5s linear infinite;
+}
+@keyframes shadowe {
+  0%{
+    box-shadow:2px 2px 10px #C94BBD ;
+  }
+  25%{
+    box-shadow:2px 2px 10px #444085;
+  }
+  50%{
+    box-shadow:2px 2px 10px #69ff7d;
+  }
+  75%{
+    box-shadow:2px 2px 10px #4186ad;
+  }
+  100%{
+    box-shadow:2px 2px 10px #C94BBD;
+  }
+}
+
+.add-btn{
+  border: black,solid;
+  padding: 15px;
+  font-size: 30px;
+  background-color: rgb(1, 19, 27);
+  color: #ffb6ea;
+  border-radius: 100px;
+  cursor: pointer;
+  transition-duration: .5s;
+  width: 200px;
+}
+.add-btn:hover{
+  background-color: #200519;
+  color: rgb(248, 248, 248);
+  box-shadow: 2px 3px 3px 2px #f17cbd;
+  transition-duration: 0.5s;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+ /* 2. Star Base Styles */
+.star {
+      position: absolute;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 5px #fff;
+      animation: twinkle 2s infinite ease-in-out;
+}
+
+    /* 3. Twinkle Animation */
+@keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+}
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #03023b;
+  border-radius: 10px;
+}
+
+/* Thumb (draggable handle) */
+::-webkit-scrollbar-thumb {
+  background: #741616;
+  border-radius: 10px;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9c3c3c;
+}
+#logo{
+  position: absolute;
+  width: 250px;
+  width: 300px;
+  border-radius: 20px;
+  opacity: 2;
+}

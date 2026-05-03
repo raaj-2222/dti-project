@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" style="zoom: 80%;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinCraze — Live Prices</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <img id="logo" src="logo.jpeg">
+    <div class="nav-logo"></div>
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="portfolio.html">💼 Portfolio</a>
+      <a href="news.html">📰 News</a>
+    </div>
+    <div class="currency-toggle">
+      <button id="usd-btn" onclick="setCurrency('usd')">$ USD</button>
+      <button id="inr-btn" onclick="setCurrency('inr')">₹ INR</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Live <span>Crypto</span> Prices 🚀</h1>
+    <p>Real-time data from CoinGecko API</p>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-label">Coins Tracked</div>
+        <div class="stat-value" id="total-coins">—</div>
+        <div class="stat-sub">Top by market cap</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Bitcoin Price</div>
+        <div class="stat-value" id="btc-price">—</div>
+        <div class="stat-sub">Live BTC</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Ethereum Price</div>
+        <div class="stat-value" id="eth-price">—</div>
+        <div class="stat-sub">Live ETH</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <input
+      type="text"
+      id="search-input"
+      class="search-input"
+      placeholder="🔍 Search by coin name or symbol..."
+      oninput="searchCoins()"
+    />
+    <select id="sort-select" class="sort-select" onchange="sortCoins()">
+      <option value="rank">Sort: By Rank</option>
+      <option value="price-high">Price: High → Low</option>
+      <option value="price-low">Price: Low → High</option>
+      <option value="change-high">Change: High → Low</option>
+    </select>
+    <button class="refresh-btn" onclick="fetchCoins()">🔄 Refresh</button>
+  </div>
+
+  <!-- COIN TABLE -->
+  <div class="table-wrap">
+    <div class="table-head">
+      <span>#</span>
+      <span>Coin</span>
+      <span>Price</span>
+      <span>24h Change</span>
+      <span>Action</span>
+    </div>
+    <!-- Coins will be added here by JavaScript -->
+    <div id="coin-list"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>CoinCraze — HTML, CSS & JavaScript | Data by <span>CoinGecko API</span></p>
+  </footer>
+  <script>
+    const starCount = 100; // Adjust this number for more or fewer stars
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+
+      // Randomize sizes between 1px and 3px
+      const size = Math.random() * 3 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+
+      // Randomize positioning across the screen
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.top = `${Math.random() * 100}vh`;
+
+      // Randomize twinkle speeds and delays
+      star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+      star.style.animationDelay = `${Math.random() * 2}s`;
+
+      document.body.appendChild(star);
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

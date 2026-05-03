@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto News — CoinCraze</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <img id="logo" src="logo.jpeg">
+    <div class="nav-logo"></span></div>
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="portfolio.html">💼 Portfolio</a>
+      <a href="news.html">📰 News</a>
+    </div>
+    <div class="currency-toggle">
+      <button id="usd-btn" onclick="setCurrency('usd')">$ USD</button>
+      <button id="inr-btn" onclick="setCurrency('inr')">₹ INR</button>
+    </div>
+  </nav>
+
+  <!-- NEWS -->
+  <div class="news-wrap">
+    <h1>📰 Crypto News</h1>
+    <p class="news-sub">Latest updates from the world of cryptocurrency</p>
+
+    <div class="news-grid">
+
+      <div class="news-card">
+        <span class="news-tag tag-btc">Bitcoin</span>
+        <h3>Bitcoin Surges Past $84,000 as Institutional Demand Grows</h3>
+        <p>Major institutional investors continue to pour capital into crypto assets. ETF inflows have reached record highs this quarter.</p>
+        <div class="news-meta"><span>CoinDesk</span><span>2 hours ago</span></div>
+      </div>
+
+      <div class="news-card">
+        <span class="news-tag tag-mkt">Market</span>
+        <h3>Total Crypto Market Cap Climbs to $3.2 Trillion</h3>
+        <p>The global cryptocurrency market capitalization has hit a new milestone as altcoins rally alongside Bitcoin.</p>
+        <div class="news-meta"><span>CoinTelegraph</span><span>5 hours ago</span></div>
+      </div>
+
+      <div class="news-card">
+        <span class="news-tag tag-defi">DeFi</span>
+        <h3>Ethereum's DeFi Ecosystem Locks in $80B in Total Value</h3>
+        <p>Decentralized finance on Ethereum continues to grow, with total value locked surpassing $80 billion.</p>
+        <div class="news-meta"><span>Decrypt</span><span>8 hours ago</span></div>
+      </div>
+
+      <div class="news-card">
+        <span class="news-tag tag-reg">Regulation</span>
+        <h3>India Considers New Crypto Framework for 2025</h3>
+        <p>The Indian government is working on a comprehensive crypto regulation bill that could bring clarity for exchanges and investors.</p>
+        <div class="news-meta"><span>Economic Times</span><span>12 hours ago</span></div>
+      </div>
+
+      <div class="news-card">
+        <span class="news-tag tag-nft">NFT</span>
+        <h3>NFT Market Shows Signs of Recovery After 2024 Slump</h3>
+        <p>Trading volumes in the NFT space have picked up significantly in early 2025, with blue-chip collections seeing renewed interest.</p>
+        <div class="news-meta"><span>The Block</span><span>1 day ago</span></div>
+      </div>
+
+      <div class="news-card">
+        <span class="news-tag tag-mkt">Market</span>
+        <h3>Solana Hits New All-Time High on Growing Ecosystem Activity</h3>
+        <p>SOL token reached a new all-time high as network activity soared. Transaction volumes now rival Ethereum in key metrics.</p>
+        <div class="news-meta"><span>BeInCrypto</span><span>1 day ago</span></div>
+      </div>
+
+      <div class="news-card">
+        <span class="news-tag tag-btc">Bitcoin</span>
+        <h3>Bitcoin Halving Effect: Miners Adjust Strategy After Reward Cut</h3>
+        <p>Mining companies are optimizing operations and shifting to more energy-efficient hardware to maintain profitability post-halving.</p>
+        <div class="news-meta"><span>CoinDesk</span><span>2 days ago</span></div>
+      </div>
+
+      <div class="news-card">
+        <span class="news-tag tag-defi">DeFi</span>
+        <h3>Uniswap V4 Launch Brings New Fee Structures</h3>
+        <p>Uniswap's latest version introduces customizable hooks and a new fee model, allowing more complex financial products on-chain.</p>
+        <div class="news-meta"><span>CoinTelegraph</span><span>3 days ago</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>CoinCraze — HTML, CSS & JavaScript | Data by <span>CoinGecko API</span></p>
+  </footer>
+<script>
+    const starCount = 100; // Adjust this number for more or fewer stars
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+
+      // Randomize sizes between 1px and 3px
+      const size = Math.random() * 3 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+
+      // Randomize positioning across the screen
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.top = `${Math.random() * 100}vh`;
+
+      // Randomize twinkle speeds and delays
+      star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+      star.style.animationDelay = `${Math.random() * 2}s`;
+
+      document.body.appendChild(star);
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

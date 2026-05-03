@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coin Detail — CryptoDash</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <img id="logo" src="logo.jpeg">
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="portfolio.html">💼 Portfolio</a>
+      <a href="news.html">📰 News</a>
+    </div>
+    <div class="currency-toggle">
+      <button id="usd-btn" onclick="setCurrency('usd')">$ USD</button>
+      <button id="inr-btn" onclick="setCurrency('inr')">₹ INR</button>
+    </div>
+  </nav>
+
+  <!-- DETAIL CONTENT -->
+  <div class="detail-wrap">
+
+    <!-- Back button -->
+    <a href="index.html" class="back-btn">← Back to all coins</a>
+
+    <!-- Coin info box -->
+    <div id="detail-box" style="border-style:none;">
+
+      <!-- Top: info card + buy card -->
+      <div class="detail-grid">
+
+        <!-- Left: coin info -->
+        <div class="detail-card">
+          <div class="d-name-row">
+            <div class="d-name" id="d-name">Loading...</div>
+            <div class="d-symbol" id="d-symbol">—</div>
+          </div>
+          <div class="d-rank" id="d-rank">—</div>
+          <div class="d-price" id="d-price">—</div>
+          <div class="d-change" id="d-change">—</div>
+          <div class="d-stats">
+            <div class="d-stat">
+              <div class="d-stat-label">Market Cap</div>
+              <div class="d-stat-val" id="d-mcap">—</div>
+            </div>
+            <div class="d-stat">
+              <div class="d-stat-label">Circulating Supply</div>
+              <div class="d-stat-val" id="d-supply">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: buy card -->
+        <div class="buy-card">
+          <h3>➕ Add to Portfolio</h3>
+          <label>Quantity</label>
+          <input
+            type="number"
+            id="buy-qty"
+            placeholder="e.g. 0.5"
+            min="0"
+            step="any"
+            oninput="updateBuyTotal()"
+          />
+          <div id="buy-total"></div>
+          <button class="buy-submit" onclick="buyCoin()">Add to Portfolio</button>
+        </div>
+
+      </div>
+
+      <!-- Chart -->
+      <div class="chart-card">
+        <h3>📈 7-Day Price History</h3>
+        <div class="chart-wrap">
+          <canvas id="priceChart"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>CoinCraze — HTML, CSS & JavaScript | Data by <span>CoinGecko API</span></p>
+  </footer>
+<script>
+    const starCount = 100; // Adjust this number for more or fewer stars
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+
+      // Randomize sizes between 1px and 3px
+      const size = Math.random() * 3 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+
+      // Randomize positioning across the screen
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.top = `${Math.random() * 100}vh`;
+
+      // Randomize twinkle speeds and delays
+      star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+      star.style.animationDelay = `${Math.random() * 2}s`;
+
+      document.body.appendChild(star);
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
